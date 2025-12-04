@@ -7,9 +7,13 @@ The script first creates the StreamVerse database and defines four key tables wi
 
 ## Tables Created
 Table Name,	Primary Key, Columns & Notes
+
 Users,	User_id	Join_date, Subscription_tier, Region
+
 Producers,	Producer_id, Name, Headquarters_City,
+
 Content, Content_id, Title, Genre, Duration_minutes, Release_Year. Foreign Key to Producers (Producer_id).
+
 Watch_History, Watch_id, Watch_date, Watch_time_minutes. Foreign Keys to Users (User_id) and Content (Content_id).
 
 **All foreign keys are defined with on delete cascade.**
