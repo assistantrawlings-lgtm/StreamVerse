@@ -4,14 +4,15 @@ This project simulates the data analysis work required for a digital media strea
 ## 💾 StreamVerse Database Setup (DDL)
 
 The script first creates the StreamVerse database and defines four key tables with relationships to simulate the core data structure of a streaming service.
-## Tables Created
-Table Name	Primary Key	Key Columns & Notes
-Users	User_id	Join_date, Subscription_tier, Region
-Producers	Producer_id	Name, Headquarters_City
-Content	Content_id	Title, Genre, Duration_minutes, Release_Year. Foreign Key to Producers (Producer_id).
-Watch_History	Watch_id	Watch_date, Watch_time_minutes. Foreign Keys to Users (User_id) and Content (Content_id).
 
-All foreign keys are defined with on delete cascade.
+## Tables Created
+Table Name,	Primary Key, Columns & Notes
+Users,	User_id	Join_date, Subscription_tier, Region
+Producers,	Producer_id, Name, Headquarters_City,
+Content, Content_id, Title, Genre, Duration_minutes, Release_Year. Foreign Key to Producers (Producer_id).
+Watch_History, Watch_id, Watch_date, Watch_time_minutes. Foreign Keys to Users (User_id) and Content (Content_id).
+
+**All foreign keys are defined with on delete cascade.**
 
 ## 📈 Data Population (DML)
 
@@ -26,6 +27,7 @@ Sample Data Summary
 
 The final section presents ten analytical SQL queries designed to extract insights from the simulated StreamVerse data.
 Query #	Purpose	Key Concepts
+
 1	Find the Top 3 Genres by total watch time.	JOIN, GROUP BY, SUM, ORDER BY, TOP 3 (or equivalent).
 
 2	Identify Producers whose content has been watched by fewer than 3 distinct users.	JOIN, GROUP BY, HAVING, COUNT(DISTINCT).
