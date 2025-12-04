@@ -27,14 +27,27 @@ Sample Data Summary
 The final section presents ten analytical SQL queries designed to extract insights from the simulated StreamVerse data.
 Query #	Purpose	Key Concepts
 1	Find the Top 3 Genres by total watch time.	JOIN, GROUP BY, SUM, ORDER BY, TOP 3 (or equivalent).
+
 2	Identify Producers whose content has been watched by fewer than 3 distinct users.	JOIN, GROUP BY, HAVING, COUNT(DISTINCT).
+
 3	Find the Users who have never watched any content.	LEFT JOIN, WHERE IS NULL (finding unmatched records).
+
 4	Calculate the average duration of content watched by 'Premium' tier users.	JOIN (3 tables), AVG, WHERE.
+
 5	List Content Titles and Genres with a duration greater than the overall average content duration.	Subquery (WHERE Duration_minutes > (SELECT AVG(...))).
+
 6	Count the total number of unique titles produced by each producer.	JOIN, GROUP BY, COUNT(DISTINCT).
+
 7	Calculate the sum of watch minutes for watch records where the individual watch time was greater than 10 minutes.	GROUP BY, SUM, HAVING.
+
 8	List all Producers and the Titles they produced (including content without a known producer if an outer join is required).	RIGHT JOIN.
+
 9	Find the User ID and Region of all users who have watched 'Sci-fi' content.	JOIN (4 tables), WHERE.
+
 10	Identify Content with a view count greater than the average view count across all content.	Complex Subquery used within a HAVING clause to compare a content's view count to the average view count of all content.
 
     
+## Author
+**Japhet Ujile**
+📧 [assistant.rawlings@gmail.com](mailto:assistant.rawlings@gmail.com)
+🌐 [GitHub](https://github.com/assistantrawlings-lgtm) | [LinkedIn](https://www.linkedin.com/in/japhet-ujile-838442148?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app])
